@@ -1,5 +1,6 @@
 package edu.pucmm;
 
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -41,7 +42,7 @@ public class ParallelMatrixSearch {
     }
 
     private static void fillMatrixRandom() {
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         for (int i = 0; i < MATRIX_SIZE; i++) {
             for (int j = 0; j < MATRIX_SIZE; j++) {
                 matrix[i][j] = rand.nextInt(1000); // Rango arbitrario
